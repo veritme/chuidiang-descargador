@@ -1,0 +1,9 @@
+Desarga de la aplicacion
+
+ Puedes descargar el descargador de {{http://maven2.chuidiang.com/com/chuidiang/descargador/1.0.0/descargador-1.0.0.jar}}
+ 
+ Para ejecutarlo, basta hacer doble click sobre el fichero .jar o bien, desde linea de comandos
+ 
++------
+java -jar descargador-1.0.0.jar
++------
