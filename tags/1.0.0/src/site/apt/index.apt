@@ -1,0 +1,27 @@
+Descargador de ficheros de sitios Web.
+
+ Esta aplicacion permite descargar de forma automatica todos los ficheros a los que enlaza una pagina html. Necesitas tener instalado java 1.6 o superior para poder lanzar esta aplicacion.
+
+[descargador.png] Ventana principal de la aplicacion
+
+ En primer lugar, en el menu configuracion, debemos indicar las extensiones de los ficheros que nos interesa descargar y los directorios de nuestro ordenador donde queremos que se realicen las descargas. Seleccionamos la opcion <configuracion> y nos aparecera una ventana con una tabla y una fila vacia.
+
+[panel-configuracion.png] Panel de configuracion
+
+ * Hacemos doble click en la celda de la primera columna y escribimos una extension de fichero que deseemos descargar. Podemos o no poner el punto. Solo una extension en cada celda. Al pulsar <intro> saldra una nueva linea en blanco para seguir poniendo extensiones.
+
+ * Hacemos doble click en la celda de la segunda columna en la misma fila que la extension que acabamos de introducir. Ponemos ahi un path donde queremos que se realice la descarga y pulsamos <intro>. Si el directorio indicado no existe, saldra una ventana preguntandonos si queremos crear dicho directorio.
+
+ * Cerrando la ventana de configuracion, se salvan automaticamente todas las extensiones y paths introducidos en un fichero en $(user.home)/.descargas/configuracion.txt. Este fichero se leera automaticamente la proxima vez que arranquemos el descargador.
+
+ []
+
+ Una vez introducida toda la configuracion, podemos empezar las descargas. Para ello
+
+ * Escribimos o copiamos la url de la pagina web en la caja de texto justo debajo del menu configuracion.
+
+ * Pulsamos <intro> en esa caja de texto o pulsamos el boton alargado en la parte de abajo "Descargar".
+
+ * En la lista apareceran los ficheros que van a descargarse. Solo apareceran aquellos que tengan una extension que hayamos introducido previamente en la venana de configuracion y, por tanto, tienen un path asignado.
+
+ []
