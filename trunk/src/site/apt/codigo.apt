@@ -1,0 +1,32 @@
+Notas de codigo
+
+ Puedes descargar un jar con los fuentes en {{http://maven2.chuidiang.com/com/chuidiang/descargador/1.0.0/descargador-1.0.0-sources.jar}}
+ 
+ Tambien puedes bajartelos con subversion de {{http://code.google.com/p/chuidiang-descargador/source/checkout}}
+ 
+ La clase con todo lo importante del codigo es <Descargador>.
+ 
+ Para usarla, despues de instanciarla, hay que pasarle a traves de su metodo <setConfiguracion()> un <Hashtable> en el que las claves sean las extensiones de los ficheros que queremos descargar y cada uno de los valores sea un directorio de nuestro disco donde queremos descargar los ficheros que tengan esa extension.
+ 
+ Finalmente, llamando a su metodo <descarga()> pasandole una URL de una pagina html que tenga enlaces a ficheros, comenzara la descarga.
+ 
+ El siguiente puede ser un ejemplo de uso de la clase:
+ 
++-----
+Hashtable<String,String> configuracion = new Hashtable<String,String>();
+configuracion.put(".pdf", "c:/documentos/");
+configuracion.put(".jpg", "c:/imagenes/");
+configuracion.put(".java", "c:/programas/java/");
+Descargador descargador = new Descargador();
+descargador.descarga ("http://www.chuidiang.com/index.php");
++-----  
+
+ No es necesario llamar a <descarga()> directamente. Hay otros metodos que nos pueden resultar utiles:
+ 
+ * <getTexto(URL)> nos devuelve en un String todo el contenido de la URL que le pasemos, supuestamente una pagina html.
+ 
+ * <getEnlaces(String)> le pasamos el contenido obtenido con el metodo anterior y nos devuelve todos los enlaces href que se encuentren en dicha pagina.
+ 
+ []
+ 
+ Posiblemente esta clase deba dividirse en dos. Una que se encargue del analisis de un fichero html buscando los href y otra clase que se encargue de la parte real de las descagas.
